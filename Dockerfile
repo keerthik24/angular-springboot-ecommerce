@@ -28,6 +28,7 @@ EXPOSE 80
 
 # Start Nginx server
 CMD ["nginx", "-g", "daemon off;"]
+
 stage-2
 # Use Maven as base image
 FROM maven:3.8.4-openjdk-17-slim AS builder
