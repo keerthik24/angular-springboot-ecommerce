@@ -11,14 +11,6 @@ COPY . .
 
 RUN npm run build --prod
 
-FROM nginx:alpine
-
-COPY --from=builder /app/dist/<your-angular-app-name> /usr/share/nginx/html
-
-EXPOSE 80
-
-CMD ["nginx", "-g", "daemon off;"]
-
 # Stage-2: Spring Boot Backend
 FROM maven:3.8.4-openjdk-17-slim AS builder
 
