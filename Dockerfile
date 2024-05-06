@@ -23,8 +23,8 @@ FROM nginx:alpine
 # Copy built Angular files to Nginx default public directory
 COPY --from=builder /app/dist/<your-angular-app-name> /usr/share/nginx/html
 
-# Expose port 80 to the outside world
-EXPOSE 80
+# Expose port 8080 to the outside world
+EXPOSE 8080
 
 # Start Nginx server
 CMD ["nginx", "-g", "daemon off;"]
