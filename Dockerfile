@@ -20,6 +20,6 @@ WORKDIR /app
 
 COPY --from=builder /app/target/<your-spring-boot-app>.jar ./app.jar
 
-EXPOSE 8080
+EXPOSE 5000
 
 CMD ["java", "-jar", "app.jar"]
